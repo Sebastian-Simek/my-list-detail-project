@@ -8,4 +8,7 @@ export async function getPokemon(from = 0, to = 18) {
   return checkError(response);
 }
 
+
+
+
 // Will come back to edit this and add functionality

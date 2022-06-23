@@ -13,7 +13,7 @@ export default function PokemonApp() {
   useEffect(() => {
     async function fetchPokemon() {
       const from = page * perPage - perPage;
-      const to = page * perPage;
+      const to = page * perPage - 1;
       const data = await getPokemon(from, to);
       setPokemon(data);
     }
@@ -24,9 +24,16 @@ export default function PokemonApp() {
 
   return (
     <div>
-      <h2>Current Page</h2>
+      <h2>Current Page {page}</h2>
       <button disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous Page</button>
       <button onClick={() => setPage(page + 1)}>Next Page</button>
+      <label>show per page
+        <select> 
+          <option>20</option>
+          <option>50</option>
+          <option>100</option>
+        </select>
+      </label>
       <PokemonList pokemons={pokemon}/>
     </div>
   );

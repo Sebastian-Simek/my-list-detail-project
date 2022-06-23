@@ -15,7 +15,7 @@ export default function App() {
           <Route exact path='/'>
             <PokemonApp />
           </Route>
-          <Route> 
+          <Route exact path='/pokemon-details/:id'> 
           </Route>
         </Switch>
       </div>
