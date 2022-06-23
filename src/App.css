@@ -51,3 +51,24 @@
 box-shadow: 13px 1px 21px 7px rgba(0,0,0,0.46);
 color: black 
 }
+
+.pokemon-detail-box{
+  display: grid;
+  justify-content: center;
+  
+}
+
+/* .stats{
+  width: 200px;
+  border: solid lightcoral 2px;
+} */
+
+.description, .stats{
+  width: 200px;
+  border: solid lightcoral 2px;
+  margin: 5px;
+}
+
+ul{
+  
+}
