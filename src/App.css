@@ -69,6 +69,6 @@ color: black
   margin: 5px;
 }
 
-ul{
-  
+ol, ul {
+	list-style: none;
 }
