@@ -9,14 +9,15 @@ export default function PokemonApp() {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(20);
   
-  async function fetchPokemon() {
-    const from = page * perPage - perPage;
-    const to = page * perPage - 1;
-    const data = await getPokemon(from, to);
-    setPokemon(data);
-  }
+  
   
   useEffect(() => {
+    async function fetchPokemon() {
+      const from = page * perPage - perPage;
+      const to = page * perPage - 1;
+      const data = await getPokemon(from, to);
+      setPokemon(data);
+    }
     fetchPokemon();
   }, [page, perPage]);
 
