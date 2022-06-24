@@ -20,27 +20,27 @@ export default function PokemonApp() {
     fetchPokemon();
   }, [page, perPage]);
 
-//   useEffect(() => {
-    
-//     fetchPokemon();
-//   },);
-
-
 
   return (
     <div>
-      <h2>Current Page {page}</h2>
-      <button disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous Page</button>
-      <button onClick={() => setPage(page + 1)}>Next Page</button>
+      <h2 className='page'>Page {page}</h2>
+      <div className='button-div'>
+        <div className='buttons'>
+          <button disabled={page <= 1} onClick={() => setPage(page - 1)}>Previous Page</button>
+          <button onClick={() => setPage(page + 1)}>Next Page</button>
+        </div>
+        <div>items per page
+          <select onChange={({ target: { value } }) => setPerPage(value)}> 
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select>
+        </div>
+      </div>
       
-      <label>show per page
-        <select onChange={({ target: { value } }) => setPerPage(value)}> 
-          <option value="20">20</option>
-          <option value="50">50</option>
-          <option value="100">100</option>
-        </select>
-      </label>
       <PokemonList pokemons={pokemon}/>
+      
     </div>
+    
   );
 }

@@ -55,18 +55,55 @@ color: black
 .pokemon-detail-box{
   display: grid;
   justify-content: center;
+}
+
+button{
+  height: 20px;
+}
+
+select{
+  width: 100px;
+  margin-left: 10px;
+}
+
+.page{
+  border: solid rgb(72, 133, 154) 2px;
+  background-color: lightblue;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 10px;
+}
+
+.type{
+  font-weight: bold;
+}
+
+.button-div{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.description, .stats, .type{
+  width: 200px;
+  border: solid lightblue 2px;
+  margin: 5px;
+  -webkit-box-shadow: 13px 1px 21px 7px rgba(0,0,0,0.46); 
+box-shadow: 13px 1px 21px 7px rgba(0,0,0,0.46);
+color: black; 
+  margin: 10px;
   
 }
 
-/* .stats{
-  width: 200px;
-  border: solid lightcoral 2px;
-} */
+.stats{
+  display: flex;
+  justify-content: baseline;
+}
 
-.description, .stats{
-  width: 200px;
-  border: solid lightcoral 2px;
-  margin: 5px;
+.description{
+  font-style: oblique;
 }
 
 ol, ul {

@@ -23,9 +23,10 @@ export default function PokemonDetails() {
       <div className='pokemon-detail-box'>
         <h3>{pokemon.name}</h3>
         <img src={pokemon.gif} width='200px'/>
+        <div className='type'>
+          <p>Type:  {pokemon.type1} {`, ${pokemon.type2}`}</p>
+        </div>
         <div className='stats'>
-          <p>Type:</p>
-          <p> {pokemon.type1} {`, ${pokemon.type2}`}</p>
           <ul> Stats:
             <li>Attack: {pokemon.attack}</li>
             <li>Defense: {pokemon.defense}</li>
